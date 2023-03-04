@@ -1,0 +1,16 @@
+{
+  "name": "tarea-2",
+  "version": "1.0.0",
+  "description": "Implementación de Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "styles": "sass src/sass:dist/css --watch --no-source-map"
+  },
+  "author": "Lamego",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
