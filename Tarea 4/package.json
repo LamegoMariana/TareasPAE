@@ -4,7 +4,9 @@
   "description": "Tarea 4 PAE - News App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon .",
+    "styles": "sass src/sass:dist/css --watch --no-source-map"
   },
   "author": "Lamego",
   "license": "ISC",
