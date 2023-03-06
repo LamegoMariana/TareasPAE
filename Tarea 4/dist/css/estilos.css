@@ -52,7 +52,7 @@ header {
   }
 }
 
-.button {
+.bt-buscar, .bt-regresar {
   font-size: large;
   display: inline-block;
   vertical-align: top;
@@ -60,19 +60,29 @@ header {
   height: 50px;
   border-radius: 5px;
 }
-.button:hover {
+.bt-buscar:hover, .bt-regresar:hover {
   background-color: #403822;
   color: white;
 }
 @media screen and (max-width: 950px) {
-  .button {
+  .bt-buscar, .bt-regresar {
     font-size: small;
     width: 60px;
     height: 30px;
   }
 }
 
-.textarea {
+#results {
+  height: 200px;
+  width: 80%;
+  align-self: center;
+}
+
+.bt-regresar {
+  width: 90px;
+}
+
+.txt-keyWord {
   border-radius: 5px;
   padding: 10px;
   size: 100px;
@@ -80,7 +90,7 @@ header {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 @media screen and (max-width: 950px) {
-  .textarea {
+  .txt-keyWord {
     padding: 2px;
     font-size: 15px;
   }

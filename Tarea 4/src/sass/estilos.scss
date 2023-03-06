@@ -53,7 +53,7 @@ header {
     }
 }
 
-.button {
+.bt-buscar {
     font-size: large;
     display: inline-block;
     vertical-align: top;
@@ -71,7 +71,18 @@ header {
     }
 }
 
-.textarea {
+#results {
+    height: 200px;
+    width: 80%;
+    align-self: center;
+}
+
+.bt-regresar {
+    @extend .bt-buscar;
+    width: 90px;
+}
+
+.txt-keyWord {
     border-radius: 5px;
     padding: 10px;
     size: 100px;
