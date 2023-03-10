@@ -1,0 +1,40 @@
+@mixin nomargin {
+    padding: 0%;
+    margin: 0%;
+}
+
+@mixin image-centered {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+}
+
+@mixin main-big-size {
+    max-width: 1024px;
+    min-width: none;
+    margin: 0 auto; 
+}
+
+@mixin fix-container {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@mixin margin-tab {
+    margin-left: 15px;
+}
+
+@mixin font-size {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin forms-layout {
+    @media screen and (max-width: 950px) {
+        @content;
+    }
+}
