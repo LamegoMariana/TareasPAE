@@ -72,10 +72,12 @@ header {
   }
 }
 
-#results {
+.results {
   height: 200px;
   width: 80%;
   align-self: center;
+  overflow-y: scroll;
+  padding: 10px;
 }
 
 .bt-regresar {
@@ -94,6 +96,44 @@ header {
     padding: 2px;
     font-size: 15px;
   }
+}
+
+.card, .card-custom {
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.card .card-title, .card-custom .card-title {
+  font-size: 1rem;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+.card .card-body, .card-custom .card-body {
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+.card .card-body a, .card-custom .card-body a {
+  text-decoration: underline;
+}
+
+.card-image-top {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-custom {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  box-shadow: none;
+}
+.card-custom .card-title {
+  color: #333;
+}
+.card-custom .card-body {
+  color: #333;
 }
 
 footer {

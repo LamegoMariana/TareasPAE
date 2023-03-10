@@ -8,6 +8,9 @@ const path = require('path');
 const rutas = require('./src/rutas');
 // Pedir funciones
 const app = express();
+// Para leer archivo .env
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Llamar a handlebars
 app.engine('handlebars', engine());

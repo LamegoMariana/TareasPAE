@@ -1,6 +1,8 @@
 // Se importan los parciales
+@use 'sass:math';
 @import "mixins";
 @import "colores";
+
 
 html {
     background-color: $color-html;
@@ -71,11 +73,15 @@ header {
     }
 }
 
-#results {
+.results {
     height: 200px;
     width: 80%;
     align-self: center;
+    overflow-y: scroll;
+    padding: 10px;
 }
+
+
 
 .bt-regresar {
     @extend .bt-buscar;
@@ -94,6 +100,52 @@ header {
             font-size: 15px;
         }
     }
+}
+
+.card {
+    display: block;
+    // padding: .75rem;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: math.div(20px, 4);
+
+    .card-title {
+        font-size: 1rem;
+        padding-bottom: .75rem;
+        font-weight: bold;
+        padding: .75rem;
+    }
+
+    .card-body {
+        font-size: 1rem;
+        padding: .75rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.card-image-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-custom {
+    @extend .card;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    box-shadow: none;
+
+    .card-title {
+        color: #333;
+    }
+
+    .card-body {
+        color: #333;
+    }
+
 }
 
 footer {

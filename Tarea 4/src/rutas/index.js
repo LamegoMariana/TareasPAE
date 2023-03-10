@@ -2,6 +2,8 @@
 const path = require('path');
 // Requerir router de express
 const router = require('express').Router();
+// Requerir controlador
+const controlador = require('./../controladores/resultados');
 
 //const rutasResultados = require('./resultados');
 
@@ -12,10 +14,7 @@ function cargarBuscador(req,res) {
 
 }
 
-function verNoticia (req,res) {
-    const keyWord = req.params.keyWord;
-    res.render('resultados', {keyWord : 'rip'})
-}
+router.get('/search', controlador.mostrarNoticias);
 
 // El middleware se usará en todas, así que se pone aquí v:
 const auth = require('../middlewares').auth;
@@ -24,6 +23,6 @@ router.use('', auth);
 
 router.get('/', auth, cargarBuscador);
 
-router.get('/resultados', verNoticia);
+
 
 module.exports = router;
