@@ -1,0 +1,168 @@
+// Se importan los parciales
+@use 'sass:math';
+@import "mixins";
+@import "colores";
+
+
+html {
+    background-color: $color-html;
+}
+
+html, body {
+    @include nomargin;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.title {
+    position:absolute;
+    top:30%;
+    left:20%;
+    transform:translate(-30%,-20%);
+}
+
+h1#saludo {
+    position:absolute;
+    font-size: 40px;
+    color: $color-titulo;
+    top:20%;
+    left:25%;
+    transform:translate(-20%,-25%);
+    @include font-size {
+        & {
+            font-size: 25px;
+        }
+    }
+}
+header {
+    height:500px;
+    width: 100%;
+    background-image: url('../../dist/img/FallingAngel.png');
+    @include image-centered;
+
+}
+
+.content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    @include buscador-layout {
+        &h2 {
+            font-size: 20px;
+        }
+    }
+}
+
+.bt-buscar {
+    font-size: large;
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    &:hover {
+        background-color: $color-hover;
+        color: white;
+    }
+    @include buscador-layout {
+        font-size: small;
+        width: 60px;
+        height: 30px;
+    }
+}
+
+.results {
+    height: 200px;
+    width: 80%;
+    align-self: center;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+
+
+.bt-regresar {
+    @extend .bt-buscar;
+    width: 90px;
+}
+
+.txt-keyWord {
+    border-radius: 5px;
+    padding: 10px;
+    size: 100px;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    @include buscador-layout {
+        & {
+            padding: 2px;
+            font-size: 15px;
+        }
+    }
+}
+
+.card {
+    display: block;
+    // padding: .75rem;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: math.div(20px, 4);
+
+    .card-title {
+        font-size: 1rem;
+        padding-bottom: .75rem;
+        font-weight: bold;
+        padding: .75rem;
+    }
+
+    .card-body {
+        font-size: 1rem;
+        padding: .75rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.card-image-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-custom {
+    @extend .card;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    box-shadow: none;
+
+    .card-title {
+        color: #333;
+    }
+
+    .card-body {
+        color: #333;
+    }
+
+}
+
+footer {
+    font-size: small;
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    padding: 20px;
+    height: 5%;
+    width: 100%;
+    font-weight: bold;
+    background-color: $color-footer;
+    line-height: 50px;
+    @include buscador-layout {
+        & {
+            font-size: xx-small;
+            height: min-content;
+        }
+    }
+}

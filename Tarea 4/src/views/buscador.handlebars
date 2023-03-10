@@ -1,0 +1,14 @@
+<section class="Buscador">
+    <h3>Ingresa tu búsqueda a continuación →</h3>
+    <form class="searchBox" action="/search" method="GET" id="my_form">
+        <input type="text" class="txt-keyWord" placeholder="Palabra clave..." type="search" name="search" id="search" />
+        <input type="submit" class="bt-buscar" id="btBuscar" value="Buscar">
+    </form>
+    <!--Integración Axios-->
+    <script>
+    document.getElementById("btBuscar").addEventListener("click", function () {
+        document.getElementById("my_form").submit();
+    });
+    </script>
+    
+</section>
