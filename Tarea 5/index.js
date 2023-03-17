@@ -29,14 +29,12 @@ app.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 
 // Conexión con mongoose (base de datos)
-mongoose.connect(MongoURL, (err ) => {
-    if(!err){
-        console.log('Se conectó a la BD');
-        app.listen(port, () => {
-            console.log('app is running in port ' + port)
-        });
-    } else {
-            console.log('Fallo en la conexión', err);
-        }
-    
+mongoose.connect(MongoURL).then(() => {
+    console.log('Conexión correcta con la BD c:');
+    // Va por las tortillas y avisa cuando ya llegó
+    app.listen(port, function() {
+        console.log('La app está corriendo en el puerto: ' + port);
+    });
+}).catch(err => {
+    console.log('No se pudo conectar a la BD :c', err);
 });
