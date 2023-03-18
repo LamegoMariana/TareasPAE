@@ -3,6 +3,7 @@
 const modelo = require('./../modelos/tareas'); // Requerir modelo
 
 // Objeto
+
 const controlador = {
     // Listar todas las tareas
     listarTodas: (req, res) => {

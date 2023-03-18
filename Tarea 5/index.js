@@ -13,8 +13,8 @@ const app = express();
 // Requerir dotenv para leer las variables de entorno
 require('dotenv').config();
 
-// Habilitar el uso del body: app.use(express.json());
-
+// Habilitar el uso del body: 
+app.use(express.json());
 // Usar rutas
 app.use('/api', api);
 // Liga a base de datos
