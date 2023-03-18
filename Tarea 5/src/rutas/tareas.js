@@ -145,7 +145,7 @@ router.put('/actualizar/:id', controladorTareas.actualizar);
 /**
  * @swagger
  * /eliminar:
- *  post:
+ *  delete:
  *   description: Para borrar una tarea.
  *   parameters:
  *     - in: body
