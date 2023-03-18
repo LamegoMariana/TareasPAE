@@ -42,8 +42,9 @@ const controlador = {
     actualizar: (req, res) => {
         const id = req.params.id;
        modelo.findOne({_id: id}).then(response => {
-        response.nombreBeneficiario = req.body.nombreBeneficiario;
-        response.solicitudRelacionada = req.body.solicitudRelacionada;
+        response.titulo = req.body.titulo;
+        response.descripcion = req.body.descripcion;
+        response.status = req.body.status;
         response.save();
         res.send(response);
        }).catch(err => {
@@ -54,7 +55,7 @@ const controlador = {
     eliminar: (req, res) => {
         const id = req.params.id;
         modelo.findOne({_id: id}).then(response => {
-            response.status = 2;
+            response.status = "Eliminada";
             response.save();
             res.send('Eliminado con éxito');
         }).catch(err =>{

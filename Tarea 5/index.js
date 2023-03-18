@@ -16,7 +16,7 @@ require('dotenv').config();
 // Habilitar el uso del body: 
 app.use(express.json());
 // Usar rutas
-app.use('/api', api);
+app.use('/', api);
 // Liga a base de datos
 const MongoURL = process.env.MONGO_URL;
 

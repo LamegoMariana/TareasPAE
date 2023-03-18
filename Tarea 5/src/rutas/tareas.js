@@ -130,14 +130,9 @@ router.post('/crear', controladorTareas.crear);
  *         type: string
  *     - in: body
  *       name: status
- *       description: Estado de la tarea (Nuevo, En progreso, Terminada)
+ *       description: Estado de la tarea (Nueva, En progreso, Terminada)
  *       schema:
  *         type: string
- *     - in: body
- *       name: fechaCreacion
- *       description: Fecha en que se creó de la tarea
- *       schema:
- *         type: date
  *   responses:
  *     200:
  *       description: Se actualiza la tarea (todo bien)
