@@ -1,0 +1,32 @@
+@import '/src/sass/mixins.scss';
+.container {
+    width: 100%;
+
+    & div {
+        width: 25%;
+        height: 120px;
+        float: left;
+        border: solid 1px black;
+        box-sizing: border-box;
+    }
+
+    &::after {
+        @include fix-container;
+    }
+}
+
+.projects-text {
+    text-align: center;
+
+    @include font-size {
+        & {
+            font-size: 10px;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    line-height: 120px;
+    vertical-align: middle;
+}
