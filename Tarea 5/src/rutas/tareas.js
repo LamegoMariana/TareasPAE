@@ -12,27 +12,6 @@ const controladorTareas = require('./../controladores/tareas');
  * /tareas:
  *  get:
  *   description: Para ver la lista completa de tareas.
- *   parameters:
- *     - in: body
- *       name: titulo
- *       description: Título de la tarea
- *       schema:
- *         type: string
- *     - in: body
- *       name: descripcion
- *       description: Explicación de en que consiste la tarea
- *       schema:
- *         type: string
- *     - in: body
- *       name: status
- *       description: Estado de la tarea (Nuevo, En progreso, Terminada)
- *       schema:
- *         type: string
- *     - in: body
- *       name: fechaCreacion
- *       description: Fecha en que se creó de la tarea
- *       schema:
- *         type: date
  *   responses:
  *     200:
  *       description: Lista de tareas del usuario (todo bien)
@@ -48,26 +27,11 @@ router.get('/', controladorTareas.listarTodas);
  *  get:
  *   description: Para ver una tarea en específico.
  *   parameters:
- *     - in: body
- *       name: titulo
- *       description: Título de la tarea
+ *     - in: params
+ *       name: id
+ *       description: ID de la tarea.
  *       schema:
  *         type: string
- *     - in: body
- *       name: descripcion
- *       description: Explicación de en que consiste la tarea
- *       schema:
- *         type: string
- *     - in: body
- *       name: status
- *       description: Estado de la tarea (Nuevo, En progreso, Terminada)
- *       schema:
- *         type: string
- *     - in: body
- *       name: fechaCreacion
- *       description: Fecha en que se creó de la tarea
- *       schema:
- *         type: date
  *   responses:
  *     200:
  *       description: Tareas del usuario (todo bien)
@@ -148,26 +112,11 @@ router.put('/actualizar/:id', controladorTareas.actualizar);
  *  delete:
  *   description: Para borrar una tarea.
  *   parameters:
- *     - in: body
- *       name: titulo
- *       description: Título de la tarea
+ *     - in: params
+ *       name: id
+ *       description: ID de la tarea
  *       schema:
  *         type: string
- *     - in: body
- *       name: descripcion
- *       description: Explicación de en que consiste la tarea
- *       schema:
- *         type: string
- *     - in: body
- *       name: status
- *       description: Estado de la tarea (Nuevo, En progreso, Terminada)
- *       schema:
- *         type: string
- *     - in: body
- *       name: fechaCreacion
- *       description: Fecha en que se creó de la tarea
- *       schema:
- *         type: date
  *   responses:
  *     200:
  *       description: Se borra la tarea (todo bien)
