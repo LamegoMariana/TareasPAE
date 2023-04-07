@@ -1,0 +1,21 @@
+@import '/src/sass/mixins.scss';
+
+.container {
+    overflow-y: scroll;
+    height: 450px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+#images {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 90px;
+    padding: 15px;
+    @include cellphone-view {
+        height: 50px;
+    }
+}

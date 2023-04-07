@@ -1,7 +1,15 @@
+@import '/src/sass/mixins.scss';
+
 footer {
     text-align: center;
     padding: 20px;
     font-weight: bold;
     background-color: gray;
     line-height: 50px;
+    @include cellphone-view {
+        & {
+            font-size: 10px;
+            line-height: 20px;
+        }
+    }
 }

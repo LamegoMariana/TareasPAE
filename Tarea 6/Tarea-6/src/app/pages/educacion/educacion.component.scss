@@ -1,21 +1,25 @@
 @import '/src/sass/mixins.scss';
 
-#EducationTitle {
-    align-self: center;
-    img#logo {
-        width: 10%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-top: 30px;
-    }
-    
-    p {
-        font-weight: bolder;
-        margin-left: 50%;
-        text-align: center;
+h2 {
+    @include cellphone-view {
+        font-size: 22px;
     }
 }
 
+.container {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
 
+    img#logo {
+        height: 200px;
+    }
 
-
+    p {
+        text-align: center;
+        @include cellphone-view {
+            padding-left: 5%;
+            text-align: left;
+        }
+    }
+}

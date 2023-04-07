@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { EducacionComponent } from './pages/educacion/educacion.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
@@ -17,7 +16,6 @@ import { InfoContactoComponent } from './pages/info-contacto/info-contacto.compo
     AppComponent,
     NavComponent,
     FooterComponent,
-    SidebarComponent,
     InicioComponent,
     EducacionComponent,
     ProyectosComponent,

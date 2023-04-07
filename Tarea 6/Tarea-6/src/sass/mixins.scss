@@ -21,7 +21,7 @@
     margin-left: 15px;
 }
 
-@mixin font-size {
+@mixin cellphone-view {
     @media screen and (max-width: 1024px) {
         @content;
     }

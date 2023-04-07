@@ -4,7 +4,11 @@ header {
     height:125px;
     width: 100%;
     background-color: black;
-    @include image-centered;
+    @include cellphone-view {
+        & {
+            height: 80px;
+        }
+    }
 }
 
 h1, a {
@@ -34,7 +38,22 @@ nav {
                 padding: 10px;
                 color:white;
                 text-decoration: none;
+                @include cellphone-view {
+                    & {
+                        font-size: 14px;
+                        padding: 5px;
+                    }
+                }
             }
+        }
+    }
+}
+
+img {
+    height: 80px;
+    @include cellphone-view {
+        & {
+            height: 50px;
         }
     }
 }
